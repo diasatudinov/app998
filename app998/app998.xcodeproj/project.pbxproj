@@ -11,6 +11,9 @@
 		2B4C50622CBD4A3F00A6A682 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50612CBD4A3F00A6A682 /* ContentView.swift */; };
 		2B4C50642CBD4A4000A6A682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C50632CBD4A4000A6A682 /* Assets.xcassets */; };
 		2B4C50672CBD4A4000A6A682 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4C50662CBD4A4000A6A682 /* Preview Assets.xcassets */; };
+		2B4C50712CBD4B5600A6A682 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50702CBD4B5600A6A682 /* LoaderView.swift */; };
+		2B4C50752CBD4D3500A6A682 /* ReOnboardingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50742CBD4D3500A6A682 /* ReOnboardingUIView.swift */; };
+		2B4C50772CBD565B00A6A682 /* UsOnboardingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50762CBD565B00A6A682 /* UsOnboardingUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		2B4C50612CBD4A3F00A6A682 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B4C50632CBD4A4000A6A682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B4C50662CBD4A4000A6A682 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2B4C50702CBD4B5600A6A682 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		2B4C50742CBD4D3500A6A682 /* ReOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReOnboardingUIView.swift; sourceTree = "<group>"; };
+		2B4C50762CBD565B00A6A682 /* UsOnboardingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsOnboardingUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,9 @@
 		2B4C505E2CBD4A3F00A6A682 /* app998 */ = {
 			isa = PBXGroup;
 			children = (
+				2B4C506F2CBD4B4800A6A682 /* LoaderView */,
+				2B4C506E2CBD4B1800A6A682 /* First */,
+				2B4C506D2CBD4B1000A6A682 /* Second */,
 				2B4C505F2CBD4A3F00A6A682 /* app998App.swift */,
 				2B4C50612CBD4A3F00A6A682 /* ContentView.swift */,
 				2B4C50632CBD4A4000A6A682 /* Assets.xcassets */,
@@ -65,6 +74,46 @@
 				2B4C50662CBD4A4000A6A682 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2B4C506D2CBD4B1000A6A682 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C50732CBD4D1E00A6A682 /* Onboarding */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		2B4C506E2CBD4B1800A6A682 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C50722CBD4D1600A6A682 /* Onboarding */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		2B4C506F2CBD4B4800A6A682 /* LoaderView */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C50702CBD4B5600A6A682 /* LoaderView.swift */,
+			);
+			path = LoaderView;
+			sourceTree = "<group>";
+		};
+		2B4C50722CBD4D1600A6A682 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C50742CBD4D3500A6A682 /* ReOnboardingUIView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2B4C50732CBD4D1E00A6A682 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C50762CBD565B00A6A682 /* UsOnboardingUIView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +188,9 @@
 			files = (
 				2B4C50622CBD4A3F00A6A682 /* ContentView.swift in Sources */,
 				2B4C50602CBD4A3F00A6A682 /* app998App.swift in Sources */,
+				2B4C50772CBD565B00A6A682 /* UsOnboardingUIView.swift in Sources */,
+				2B4C50752CBD4D3500A6A682 /* ReOnboardingUIView.swift in Sources */,
+				2B4C50712CBD4B5600A6A682 /* LoaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
