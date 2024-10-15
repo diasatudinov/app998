@@ -9,7 +9,7 @@ import Foundation
 
 class DiscountsViewModel: ObservableObject {
     
-    @Published var discounts: [Discount] = [Discount(name: "", market: "", category: "", startDate: Date(), endDate: Date(), note: "")]
+    @Published var discounts: [Discount] = [Discount(name: "", market: "", category: "", startDate: Date(), endDate: Date(), note: ""), Discount(name: "Discount 2 for the price of 1", market: "Domino's Pizza", category: "Food", startDate: Date(), endDate: Calendar.current.date(byAdding: .hour, value: 48, to: Date()) ?? Date(), note: "Buy two pizzas and get the second one for free asdsadasd sadsad")]
     @Published var categories: [String] = [
         "Rock",
         "Pop",

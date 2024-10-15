@@ -105,16 +105,16 @@ struct DiscountsUIView: View {
                             if selectedTab == .active {
                                 ForEach(viewModel.filteredDiscounts().filter({ $0.isArchive == false }), id: \.self) { discount in
                                     
-                                    Text("AAAAA")
+                                    DiscountCell(discount: discount)
                                 }
                             } else {
                                 ForEach(viewModel.filteredDiscounts().filter({ $0.isArchive == true }), id: \.self) { discount in
-                                    Text("AAAAA")
+                                    DiscountCell(discount: discount)
                                     
                                 }
                             }
                         }
-                    }
+                    }.padding(.horizontal)
                 }
                 
                 Button {

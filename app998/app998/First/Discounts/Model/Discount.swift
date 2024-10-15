@@ -26,6 +26,21 @@ struct Discount: Hashable, Codable {
             return orderDateTime < currentDate
         }
     }
+    
+    var hasOneDayLeft: Bool {
+        let currentDate = Date()
+        let calendar = Calendar.current
+        
+        // Calculate the time difference in hours between currentDate and endDate
+        let timeDifference = calendar.dateComponents([.hour], from: currentDate, to: endDate)
+        
+        // If the time difference in hours is less than 25 and greater than or equal to 0, return true
+        if let hoursLeft = timeDifference.hour {
+            return hoursLeft >= 0 && hoursLeft <= 24
+        }
+        
+        return false
+    }
 }
 
 struct Category: Identifiable, Hashable {
