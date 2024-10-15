@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Dashboard: Codable {
+    
+    var saved: Double
+    var market: String
+    var categoryOne: String
+    var valueOne: Double
+    var categoryTwo: String
+    var valueTwo: Double
+}
