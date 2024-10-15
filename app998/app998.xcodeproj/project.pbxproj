@@ -18,6 +18,9 @@
 		2B4C50802CBE6C3D00A6A682 /* EditDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C507F2CBE6C3D00A6A682 /* EditDashboard.swift */; };
 		2B4C50822CBE6EF900A6A682 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50812CBE6EF900A6A682 /* DashboardViewModel.swift */; };
 		2B4C50842CBE6F3000A6A682 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50832CBE6F3000A6A682 /* Dashboard.swift */; };
+		2B4C508A2CBE85CD00A6A682 /* DiscountsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50892CBE85CD00A6A682 /* DiscountsUIView.swift */; };
+		2B4C508C2CBE898000A6A682 /* DiscountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C508B2CBE898000A6A682 /* DiscountsViewModel.swift */; };
+		2B4C508E2CBE89AC00A6A682 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C508D2CBE89AC00A6A682 /* Discount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		2B4C507F2CBE6C3D00A6A682 /* EditDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDashboard.swift; sourceTree = "<group>"; };
 		2B4C50812CBE6EF900A6A682 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		2B4C50832CBE6F3000A6A682 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		2B4C50892CBE85CD00A6A682 /* DiscountsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsUIView.swift; sourceTree = "<group>"; };
+		2B4C508B2CBE898000A6A682 /* DiscountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsViewModel.swift; sourceTree = "<group>"; };
+		2B4C508D2CBE89AC00A6A682 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,7 @@
 		2B4C506E2CBD4B1800A6A682 /* First */ = {
 			isa = PBXGroup;
 			children = (
+				2B4C50852CBE854200A6A682 /* Discounts */,
 				2B4C50782CBE61EA00A6A682 /* Dashboard */,
 				2B4C50722CBD4D1600A6A682 /* Onboarding */,
 			);
@@ -156,6 +163,40 @@
 			isa = PBXGroup;
 			children = (
 				2B4C50832CBE6F3000A6A682 /* Dashboard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B4C50852CBE854200A6A682 /* Discounts */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C50882CBE858C00A6A682 /* Model */,
+				2B4C50872CBE858800A6A682 /* View */,
+				2B4C50862CBE858300A6A682 /* ViewModel */,
+			);
+			path = Discounts;
+			sourceTree = "<group>";
+		};
+		2B4C50862CBE858300A6A682 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C508B2CBE898000A6A682 /* DiscountsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B4C50872CBE858800A6A682 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C50892CBE85CD00A6A682 /* DiscountsUIView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B4C50882CBE858C00A6A682 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B4C508D2CBE89AC00A6A682 /* Discount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,9 +273,12 @@
 			files = (
 				2B4C50622CBD4A3F00A6A682 /* ContentView.swift in Sources */,
 				2B4C50602CBD4A3F00A6A682 /* app998App.swift in Sources */,
+				2B4C508E2CBE89AC00A6A682 /* Discount.swift in Sources */,
 				2B4C50802CBE6C3D00A6A682 /* EditDashboard.swift in Sources */,
+				2B4C508C2CBE898000A6A682 /* DiscountsViewModel.swift in Sources */,
 				2B4C50772CBD565B00A6A682 /* UsOnboardingUIView.swift in Sources */,
 				2B4C50842CBE6F3000A6A682 /* Dashboard.swift in Sources */,
+				2B4C508A2CBE85CD00A6A682 /* DiscountsUIView.swift in Sources */,
 				2B4C50752CBD4D3500A6A682 /* ReOnboardingUIView.swift in Sources */,
 				2B4C50712CBD4B5600A6A682 /* LoaderView.swift in Sources */,
 				2B4C507E2CBE620700A6A682 /* DashboardUIView.swift in Sources */,
