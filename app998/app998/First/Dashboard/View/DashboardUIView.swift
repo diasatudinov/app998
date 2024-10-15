@@ -10,6 +10,7 @@ import SwiftUI
 struct DashboardUIView: View {
     
     @ObservedObject var viewModel: DashboardViewModel
+    @ObservedObject var discountsVM: DiscountsViewModel
     @State private var editDashboard = false
     var body: some View {
         ZStack {
@@ -182,8 +183,8 @@ struct DashboardUIView: View {
                    
                 }.padding(.horizontal).padding(.top, 40)
                 
-                Button {
-                    
+                NavigationLink {
+                    DiscountsUIView(viewModel: discountsVM)
                 } label: {
                     ZStack {
                         Rectangle()
@@ -217,5 +218,5 @@ struct DashboardUIView: View {
 }
 
 #Preview {
-    DashboardUIView(viewModel: DashboardViewModel())
+    DashboardUIView(viewModel: DashboardViewModel(), discountsVM: DiscountsViewModel())
 }

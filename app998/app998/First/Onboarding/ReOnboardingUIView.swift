@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ReOnboardingUIView: View {
+    @ObservedObject var dashboardVM: DashboardViewModel = DashboardViewModel()
+    @ObservedObject var discountsVM: DiscountsViewModel = DiscountsViewModel()
+    
     @State private var pageNum: Int = 1
     @State private var showSheet = false
     @AppStorage("signedUP") var signedUP: Bool = false
@@ -167,6 +170,7 @@ struct ReOnboardingUIView: View {
             
         } else {
             //HomeUIView(viewModel: homeVM, orderVM: orderVM)
+            DashboardUIView(viewModel: dashboardVM, discountsVM: discountsVM)
         }
     }
 }

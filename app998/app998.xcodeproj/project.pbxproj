@@ -21,6 +21,7 @@
 		2B4C508A2CBE85CD00A6A682 /* DiscountsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50892CBE85CD00A6A682 /* DiscountsUIView.swift */; };
 		2B4C508C2CBE898000A6A682 /* DiscountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C508B2CBE898000A6A682 /* DiscountsViewModel.swift */; };
 		2B4C508E2CBE89AC00A6A682 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C508D2CBE89AC00A6A682 /* Discount.swift */; };
+		2B4C50902CBEB72D00A6A682 /* DiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C508F2CBEB72D00A6A682 /* DiscountCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		2B4C50892CBE85CD00A6A682 /* DiscountsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsUIView.swift; sourceTree = "<group>"; };
 		2B4C508B2CBE898000A6A682 /* DiscountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsViewModel.swift; sourceTree = "<group>"; };
 		2B4C508D2CBE89AC00A6A682 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
+		2B4C508F2CBEB72D00A6A682 /* DiscountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				2B4C50892CBE85CD00A6A682 /* DiscountsUIView.swift */,
+				2B4C508F2CBEB72D00A6A682 /* DiscountCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				2B4C50752CBD4D3500A6A682 /* ReOnboardingUIView.swift in Sources */,
 				2B4C50712CBD4B5600A6A682 /* LoaderView.swift in Sources */,
 				2B4C507E2CBE620700A6A682 /* DashboardUIView.swift in Sources */,
+				2B4C50902CBEB72D00A6A682 /* DiscountCell.swift in Sources */,
 				2B4C50822CBE6EF900A6A682 /* DashboardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
