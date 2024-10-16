@@ -22,6 +22,8 @@
 		2B4C508C2CBE898000A6A682 /* DiscountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C508B2CBE898000A6A682 /* DiscountsViewModel.swift */; };
 		2B4C508E2CBE89AC00A6A682 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C508D2CBE89AC00A6A682 /* Discount.swift */; };
 		2B4C50902CBEB72D00A6A682 /* DiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C508F2CBEB72D00A6A682 /* DiscountCell.swift */; };
+		2B4C50922CBFBFA500A6A682 /* CreateDiscountUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50912CBFBFA500A6A682 /* CreateDiscountUIView.swift */; };
+		2B4C50942CBFC75400A6A682 /* EditDiscountUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C50932CBFC75400A6A682 /* EditDiscountUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		2B4C508B2CBE898000A6A682 /* DiscountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountsViewModel.swift; sourceTree = "<group>"; };
 		2B4C508D2CBE89AC00A6A682 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 		2B4C508F2CBEB72D00A6A682 /* DiscountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCell.swift; sourceTree = "<group>"; };
+		2B4C50912CBFBFA500A6A682 /* CreateDiscountUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiscountUIView.swift; sourceTree = "<group>"; };
+		2B4C50932CBFC75400A6A682 /* EditDiscountUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDiscountUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,8 @@
 			children = (
 				2B4C50892CBE85CD00A6A682 /* DiscountsUIView.swift */,
 				2B4C508F2CBEB72D00A6A682 /* DiscountCell.swift */,
+				2B4C50912CBFBFA500A6A682 /* CreateDiscountUIView.swift */,
+				2B4C50932CBFC75400A6A682 /* EditDiscountUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,9 +285,11 @@
 				2B4C508E2CBE89AC00A6A682 /* Discount.swift in Sources */,
 				2B4C50802CBE6C3D00A6A682 /* EditDashboard.swift in Sources */,
 				2B4C508C2CBE898000A6A682 /* DiscountsViewModel.swift in Sources */,
+				2B4C50922CBFBFA500A6A682 /* CreateDiscountUIView.swift in Sources */,
 				2B4C50772CBD565B00A6A682 /* UsOnboardingUIView.swift in Sources */,
 				2B4C50842CBE6F3000A6A682 /* Dashboard.swift in Sources */,
 				2B4C508A2CBE85CD00A6A682 /* DiscountsUIView.swift in Sources */,
+				2B4C50942CBFC75400A6A682 /* EditDiscountUIView.swift in Sources */,
 				2B4C50752CBD4D3500A6A682 /* ReOnboardingUIView.swift in Sources */,
 				2B4C50712CBD4B5600A6A682 /* LoaderView.swift in Sources */,
 				2B4C507E2CBE620700A6A682 /* DashboardUIView.swift in Sources */,
