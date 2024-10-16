@@ -19,6 +19,7 @@ struct DiscountsUIView: View {
     @State var category = ""
     
     @State private var showAddCategory = false
+    @State private var addDiscount = false
     var body: some View {
         ZStack {
             Color.mainBG.ignoresSafeArea()
@@ -34,6 +35,7 @@ struct DiscountsUIView: View {
                 HStack {
                     Button {
                         withAnimation {
+                            category = ""
                             showAddCategory = true
                         }
                     } label: {
@@ -105,11 +107,11 @@ struct DiscountsUIView: View {
                             if selectedTab == .active {
                                 ForEach(viewModel.filteredDiscounts().filter({ $0.isArchive == false }), id: \.self) { discount in
                                     
-                                    DiscountCell(discount: discount)
+                                    DiscountCell(discount: discount, viewModel: viewModel)
                                 }
                             } else {
                                 ForEach(viewModel.filteredDiscounts().filter({ $0.isArchive == true }), id: \.self) { discount in
-                                    DiscountCell(discount: discount)
+                                    DiscountCell(discount: discount, viewModel: viewModel)
                                     
                                 }
                             }
@@ -119,7 +121,7 @@ struct DiscountsUIView: View {
                 
                 Button {
                    
-                        
+                    addDiscount = true
                     
                 } label: {
                     ZStack {
@@ -146,7 +148,9 @@ struct DiscountsUIView: View {
                     }
                 }
             }.ignoresSafeArea(edges: /*@START_MENU_TOKEN@*/.bottom/*@END_MENU_TOKEN@*/)
-            
+                .sheet(isPresented: $addDiscount) {
+                    CreateDiscountUIView(viewModel: viewModel)
+                }
             if showAddCategory {
                 
                 ZStack {
