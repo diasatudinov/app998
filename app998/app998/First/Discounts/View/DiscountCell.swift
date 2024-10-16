@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DiscountCell: View {
     @State var discount: Discount
+    @ObservedObject var viewModel: DiscountsViewModel
+    @State private var editDiscount = false
     var body: some View {
         ZStack {
             Color.mainBG
@@ -62,7 +64,7 @@ struct DiscountCell: View {
                     }.padding(.bottom, 24)
                     
                     Button {
-                        
+                        editDiscount = true
                     } label: {
                         ZStack {
                             Rectangle()
@@ -76,6 +78,9 @@ struct DiscountCell: View {
                     }
                 }.padding()
             }.frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).background(Color.white.opacity(0.12)).cornerRadius(16).opacity(discount.isArchive ? 0.6 : 1)
+                .sheet(isPresented: $editDiscount) {
+                    EditDiscountUIView(viewModel: viewModel, discount: discount)
+                }
         }
     }
     
@@ -87,5 +92,5 @@ struct DiscountCell: View {
 }
 
 #Preview {
-    DiscountCell(discount: Discount(name: "Discount 2 for the price of 1", market: "Domino's Pizza", category: "Food", startDate: Date(), endDate: Calendar.current.date(byAdding: .hour, value: 0, to: Date()) ?? Date(), note: "Buy two pizzas and get the second one for free asdsadasd sadsad"))
+    DiscountCell(discount: Discount(name: "Discount 2 for the price of 1", market: "Domino's Pizza", category: "Food", startDate: Date(), endDate: Calendar.current.date(byAdding: .hour, value: 0, to: Date()) ?? Date(), note: "Buy two pizzas and get the second one for free asdsadasd sadsad"), viewModel: DiscountsViewModel())
 }
