@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct DashboardUIView: View {
     
@@ -83,10 +84,10 @@ struct DashboardUIView: View {
                                         .foregroundColor(.white.opacity(0.7))
                                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                                 }.padding(20)//.padding(.horizontal, 14)
-                                .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
-                                )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
+                                    )
                                 
                                 VStack {
                                     Text("\(String(format: "%.1f", viewModel.data.valueTwo))%")
@@ -96,10 +97,10 @@ struct DashboardUIView: View {
                                         .foregroundColor(.white.opacity(0.7))
                                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                                 }.padding(20)//.padding(.horizontal, 14)
-                                .overlay(
-                                RoundedRectangle(cornerRadius: 12)
-                                    .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
-                                )
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
+                                    )
                             }
                             
                         }.padding(.horizontal).frame(maxWidth: .infinity).frame(height: 214).background(Color.white.opacity(0.08)).cornerRadius(16)
@@ -115,72 +116,82 @@ struct DashboardUIView: View {
                     
                     ScrollView(.horizontal) {
                         HStack {
-                            VStack {
-                                
-                                Image(systemName: "doc.text.magnifyingglass")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 46)
-                                    .foregroundColor(.white)
-                                    .padding(10).padding(.horizontal, 4)
-                                    .background(Color.secondaryBlue)
-                                    .cornerRadius(10)
+                            Button {
+                                openUsagePolicy()
+                            } label: {
+                                VStack {
                                     
-                                
-                                Text("Usage Policy")
-                                    .font(.system(size: 17, weight: .semibold))
-                                    .foregroundColor(.white)
-                                
-                            }.padding(25).overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
-                            )
-                            
-                            VStack {
-                                
-                                Image(systemName: "star.square")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 46)
-                                    .foregroundColor(.white)
-                                    .padding(10).padding(.horizontal, 4)
-                                    .background(Color.secondaryBlue)
-                                    .cornerRadius(10)
+                                    Image(systemName: "doc.text.magnifyingglass")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 46)
+                                        .foregroundColor(.white)
+                                        .padding(10).padding(.horizontal, 4)
+                                        .background(Color.secondaryBlue)
+                                        .cornerRadius(10)
                                     
-                                
-                                Text("Rate our app")
-                                    .font(.system(size: 17, weight: .semibold))
-                                    .foregroundColor(.white)
-                                
-                            }.padding(25).overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
-                            )
-                            
-                            VStack {
-                                
-                                Image(systemName: "square.and.arrow.up")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 46)
-                                    .foregroundColor(.white)
-                                    .padding(10).padding(.horizontal, 4)
-                                    .background(Color.secondaryBlue)
-                                    .cornerRadius(10)
                                     
-                                
-                                Text("Share our app")
-                                    .font(.system(size: 17, weight: .semibold))
-                                    .foregroundColor(.white)
-                                
-                            }.padding(25).overlay(
-                            RoundedRectangle(cornerRadius: 16)
-                                .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
-                            )
+                                    Text("Usage Policy")
+                                        .font(.system(size: 17, weight: .semibold))
+                                        .foregroundColor(.white)
+                                    
+                                }.padding(25).overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
+                                )
+                            }
+                            Button {
+                                rateApp()
+                            } label: {
+                                VStack {
+                                    
+                                    Image(systemName: "star.square")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 46)
+                                        .foregroundColor(.white)
+                                        .padding(10).padding(.horizontal, 4)
+                                        .background(Color.secondaryBlue)
+                                        .cornerRadius(10)
+                                    
+                                    
+                                    Text("Rate our app")
+                                        .font(.system(size: 17, weight: .semibold))
+                                        .foregroundColor(.white)
+                                    
+                                }.padding(25).overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
+                                )
+                            }
+                            Button {
+                                shareApp()
+                            } label: {
+                                VStack {
+                                    
+                                    Image(systemName: "square.and.arrow.up")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(height: 46)
+                                        .foregroundColor(.white)
+                                        .padding(10).padding(.horizontal, 4)
+                                        .background(Color.secondaryBlue)
+                                        .cornerRadius(10)
+                                    
+                                    
+                                    Text("Share our app")
+                                        .font(.system(size: 17, weight: .semibold))
+                                        .foregroundColor(.white)
+                                    
+                                }.padding(25).overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(lineWidth: 1).foregroundColor(.secondaryBlue)
+                                )
+                            }
                         }.padding()
                     }.padding(.horizontal, -16)
                     
-                   
+                    
                 }.padding(.horizontal).padding(.top, 40)
                 
                 NavigationLink {
@@ -213,6 +224,27 @@ struct DashboardUIView: View {
                 .sheet(isPresented: $editDashboard) {
                     EditDashboard(viewModel: viewModel)
                 }
+        }
+    }
+    
+    func shareApp() {
+        guard let url = URL(string: "https://itunes.apple.com/app/id6737909048") else { return }
+        let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+            rootViewController.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    func rateApp() {
+        SKStoreReviewController.requestReview()
+    }
+    
+    func openUsagePolicy() {
+        guard let url = URL(string: "https://www.termsfeed.com/live/34bbfca1-94fe-4f4c-bd59-995d9f491f8f") else { return }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
 }
